@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/android-chrome-192x192.png" type="image/x-icon">
+    <script src="https://code.angularjs.org/1.8.2/angular.js"></script>
+    <script src="/angular"></script>
+    <link rel="stylesheet" href="/css/payment.css" />
+    <title>Payment Page</title>
+</head>
+
+<body ng-app="PaymentApp" ng-controller="PaymentController">
+    <h1>SARAL powered by SURYA BANK</h1>
+
+    <div class="container">
+        <div class="left-column">
+            <h2>Selected Item Details</h2>
+            <p><strong>Name:</strong> {{ selectedItem.productName }}</p>
+            <p><strong>Price:</strong> ₹{{ selectedItem.price }}</p>
+            <p><strong>Description:</strong><br> {{ selectedItem.description }}</p>
+
+            <h4>SURYA BANK & SURYAKART is part of SURYA GROUP <br> All Payment Credentials are securely stored</h4>
+        </div>
+
+        <div class="right-column">
+            <form action="/payment_successful" method="post">
+                <div class="form-group">
+                    <label for="price">Price: <strong>₹</strong></label>
+                    <input type="number" id="price" name="price" ng-model="price" value="{{selectedItem.price}}" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" ng-model="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="number" id="cardNumber" name="cardNumber" ng-model="cardNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="month" id="expiryDate" name="expiryDate" ng-model="expiryDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" ng-model="cvv" required>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery Address:</label>
+                    <textarea id="deliveryAddress" name="deliveryAddress" ng-model="deliveryAddress" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Make Payment">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footers">&copy; 2024 Suryakart. All rights reserved.</p>
+        <p class="footers">Wadala, Mumbai, Maharashtra, India</p>
+    </footer>
+
+    <script>
+        angular.module('PaymentApp', [])
+            .controller('PaymentController', ['$scope', function ($scope) {
+                // Parse the query parameter to get the index number
+                const urlParams = new URLSearchParams(window.location.search);
+                const index = parseInt(urlParams.get('index'));
+    
+                // Retrieve the selected item based on the index
+                $scope.selectedItem = JSON.parse(localStorage.getItem('cartItems'))[index] || {};
+
+                $scope.submitPayment = function () {
+                    location.href = '/payment_successful'
+                };
+            }]);
+    </script>
+    
+</body>
+
+</html>

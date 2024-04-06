@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/cart.css" />
+    <title>Cart - Suryakart</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td width="20%"><img src="./assets/suryakart.jpg" alt="suryakart" width="310" height="50"/></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><img src="./assets/shopping-cart.svg" alt="electronics" width="80" height="80" /></td>
+            <td>
+                <h2>Cart</h2>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><a href="/mainportal"><button class="navigation">Home</button></a><a href="/cart"><button
+                        class="navigation">Cart</button></a></td>
+        </tr>
+    </table>
+    <div id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+
+    <footer>
+        <p class="footers">&copy; 2024 Suryakart. All rights reserved.</p>
+        <p class="footers">Wadala, Mumbai, Maharashtra, India</p>
+    </footer>
+
+    <script>
+        // Function to display cart items from localStorage
+        function displayCartItems() {
+            var cartContainer = document.getElementById('cart-items');
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Clear previous content
+            cartContainer.innerHTML = '';
+
+            if (cartItems.length === 0) { // Check if cartItems array is empty
+                cartContainer.innerHTML = '<h1>Cart is Empty</h1>';
+                return; // Exit the function if cart is empty
+            }
+
+            // Loop through cart items and create elements to display them
+            cartItems.forEach(function (item, index) {
+                var cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+
+                var productNameElem = document.createElement('h3');
+                productNameElem.textContent = item.productName;
+
+                var priceElem = document.createElement('p');
+                priceElem.innerHTML = '<strong>Price:</strong> ₹' + item.price;
+
+                var descriptionElem = document.createElement('p');
+                descriptionElem.innerHTML = '<strong>Description:</strong><br>' + item.description.replace(/\n/g, '<br>');
+
+                var cartItemOptions = document.createElement('div');
+                cartItemOptions.classList.add('cart-item-options');
+
+                var removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.classList.add('remove-button');
+                removeButton.onclick = function () {
+                    removeFromCart(index);
+                };
+
+                var paymentButton = document.createElement('button');
+                paymentButton.textContent = 'Payment';
+                paymentButton.onclick = function () {
+                    goToPayment(index);
+                };
+
+                cartItemOptions.appendChild(removeButton);
+                cartItemOptions.appendChild(paymentButton);
+
+                cartItem.appendChild(cartItemOptions);
+                cartItem.appendChild(productNameElem);
+                cartItem.appendChild(priceElem);
+                cartItem.appendChild(descriptionElem);
+
+                cartContainer.appendChild(cartItem);
+            });
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(index) {
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCartItems();
+        }
+
+        // Call the displayCartItems function when the page loads
+        window.onload = displayCartItems;
+
+        // Function to redirect to payment page with index as query parameter
+        function goToPayment(index) {
+            location.href = '/payment?index=' + index;
+        }
+    </script>
+
+</body>
+
+</html>

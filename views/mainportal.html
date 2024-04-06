@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/mainportal.css">
+    <link rel="shortcut icon" href="./assets/android-chrome-192x192.png" type="image/x-icon" />
+    <title>Suryakart</title>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/suryakart.jpg" alt="suryakart" width="310" height="50" />
+        <input type="search" id="searchInput" placeholder="Search" />
+        <nav>
+            <a href="/cart" data-tooltip="Cart"><img src="./assets/shopping-cart.svg" alt="shopping-cart"
+                    id="svgCart" /></a>
+            <a href="/logout" data-tooltip="Logout"><img src="./assets/logout.svg" alt="Logout" id="svgLogout" /></a>
+        </nav>
+    </header>
+
+    <div class="table-container">
+        <table class="menu-table">
+            <tr>
+                <td>
+                    <a href="/grocery"><img class="img-menu" src="./assets/mainportal/grocery.png" alt="grocery"
+                            width="75" height="75" /></a>
+                </td>
+                <td>
+                    <a href="/mobiles"><img class="img-menu" src="./assets/mainportal/mobiles.jpeg" alt="mobiles"
+                            width="75" height="75" /></a>
+                </td>
+                <td>
+                    <a href="/fashion"><img class="img-menu" src="./assets/mainportal/fashion.png" alt="fashion"
+                            width="75" height="75" /></a>
+                </td>
+                <td>
+                    <a href="/electronics"><img class="img-menu" src="./assets/mainportal/electronics.jpeg"
+                            alt="electronics" width="75" height="75" /></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="menu">Grocery</td>
+                <td class="menu">Mobiles</td>
+                <td class="menu">Fashion</td>
+                <td class="menu">Electronics</td>
+            </tr>
+            <tr>
+                <td colspan="4" id="marquee">
+                    <marquee behavior="scroll" direction="left"><strong>Happy & Auspicious Holi Offer !!</strong>
+                        <br><strong> Enjoy the festival of colours with Suryakart with exciting deals !!</strong>
+                        <br><strong> Holi के रंग Suryakart के संग !! </strong>
+                    </marquee>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Best of Electronics</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="/electronics"><img src="./assets/electronics/laser-printer.png" alt="laser-printer" /></a>
+                <div class="prod-name">Laser Printer</div>
+                <div class="prod-price">₹10,149 <span class="mrp">M.R.P <strike>₹10,549</strike></span></div>
+            </div>
+            <div class="product-card">
+                <a href="/electronics"><img src="./assets/electronics/ink-tank-printer.png"
+                        alt="ink-tank-printer" /></a>
+                <div class="prod-name">Ink Tank Printer</div>
+                <div class="prod-price">₹8,599 <span class="mrp">M.R.P <strike>₹8,399</strike></span></div>
+            </div>
+            <div class="product-card">
+                <a href="/electronics"><img src="./assets/electronics/samsung-tab-s6-lite.png"
+                        alt="samsung-tab-s6-lite" /></a>
+                <div class="prod-name">Samsung Tab S6 lite</div>
+                <div class="prod-price">₹26,999 <span class="mrp">M.R.P <strike>₹26,599</strike></span></div>
+            </div>
+            <div class="product-card">
+                <a href="/electronics"><img src="./assets/electronics/webcam.png" alt="webcam" /></a>
+                <div class="prod-name">Webcam</div>
+                <div class="prod-price">₹559 <span class="mrp">M.R.P <strike>₹549</strike></span></div>
+            </div>
+        </div>
+
+        <h2>Best of Mobiles</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="/mobiles"><img src="./assets/mobiles/galaxy-a15-5g.png" alt="galaxy-a15-5g" /></a>
+                <div class="prod-name">SAMSUNG GALAXY A15 5G</div>
+                <div class="prod-price">₹19,499 <span class="mrp">M.R.P <strike>₹19,199</strike></span></div>
+            </div>
+            <div class="product-card">
+                <a href="/mobiles"><img src="./assets/mobiles/samsung-galaxy-a13.png" alt="samsung-galaxy-a13" /></a>
+                <div class="prod-name">SAMSUNG GALAXY A13</div>
+                <div class="prod-price">₹15,990 <span class="mrp">M.R.P <strike>₹15,550</strike></span></div>
+            </div>
+            <div class="product-card">
+                <a href="/mobiles"><img src="./assets/mobiles/vivo-t2x-5g.png" alt="vivo-t2x-5g" /></a>
+                <div class="prod-name">VIV0 T2x 5G</div>
+                <div class="prod-price">₹12,999 <span class="mrp">M.R.P <strike>₹12,499</strike></span></div>
+            </div>
+            <div class="product-card">
+                <a href="/mobiles"><img src="./assets/mobiles/realme-11x-5g.png" alt="realme-11x-5g" /></a>
+                <div class="prod-name">REALME 11x 5G</div>
+                <div class="prod-price">₹15,999 <span class="mrp">M.R.P <strike>₹15,559</strike></span></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Suryakart. All rights reserved.</p>
+        <p>Wadala, Mumbai, Maharashtra, India</p>
+    </footer>
+</body>
+
+</html>

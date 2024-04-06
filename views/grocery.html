@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/gemf.css"/>
+    <title>Grocery - Suryakart</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td width="20%"><img src="./assets/suryakart.jpg" alt="suryakart" width="310" height="50"/></td>
+        </tr>
+    </table>
+    <div class="title-container">
+        <img src="./assets/mainportal/grocery.png" alt="electronics" width="80" height="80" />
+        <h2>GROCERY</h2>
+    </div>
+    <table>
+        <tr>
+            <td><a href="/mainportal"><button class="navigation">Home</button></a><a href="/cart"><button class="navigation">Cart</button></a></td>
+        </tr>
+    </table>
+    <table class="table-border" cellpadding="20">
+        <tr>
+            <th class="table-border">Sr.no</th>
+            <th class="table-border">Product Image</th>
+            <th class="table-border">Product Name</th>
+            <th class="table-border">Price</th>
+            <th class="table-border">Description</th>
+            <th class="table-border">Cart</th>
+        </tr>
+        <tr>
+            <td class="increase-font center table-border"><strong>1</strong></td>
+            <td class="center table-border"><img src="./assets/grocery/emami-sunflower-oil.png" alt="emami-sunflower-oil" height="120" /></td>
+            <td class="increase-font center table-border"><strong>Sunflower Oil</strong></td>
+            <td class="increase-font center table-border"><strong>₹108</strong></td>
+            <td class="table-border">
+                <strong>Brand-</strong>EMAMI <br> 
+                <strong>Type-</strong>Sunflower Oil <br> 
+                <strong>Quantity-</strong>1L <br> 
+                <strong>Manufactured by:</strong> <br>
+                Emami Agrotech limited 149 debhog HPL link road Po Bhabanipur haldia-721657
+            </td>
+            <td class="center table-border" width="60" height="60">
+                <button onclick="addToCart('Sunflower Oil', '108', 'Brand- EMAMI<br>Type- Sunflower Oil<br>Quantity- 1L<br>Manufactured by: Emami Agrotech limited 149 debhog HPL link road Po Bhabanipur haldia-721657')">
+                    <img src="./assets/shopping-cart.svg" alt="shopping-cart" width="40" height="40">Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="increase-font center table-border"><strong>2</strong></td>
+            <td class="center table-border"><img src="./assets/grocery/suji-fortune.png" alt="suji-fortune" height="120" /></td>
+            <td class="increase-font center table-border"><strong>Fortune Suji</strong></td>
+            <td class="increase-font center table-border"><strong>₹25</strong></td>
+            <td class="table-border">
+                <strong>Brand-</strong>Fortune <br> 
+                <strong>Type-</strong>Suji<br> 
+                <strong>Quantity-</strong>500g <br> 
+                <strong>Manufactured by:</strong> <br>
+                Fortune HouseNear Navrangpura Railway Crossing,Ahmedabad - 380 009, GUJARAT (India)
+            </td>
+            <td class="center table-border" width="60" height="60">
+                <button onclick="addToCart('Fortune Suji', '25', 'Brand- Fortune\nType- Suji\nQuantity- 500g\nManufactured by: Fortune HouseNear Navrangpura Railway Crossing,Ahmedabad - 380 009, GUJARAT (India)')">
+                    <img src="./assets/shopping-cart.svg" alt="shopping-cart" width="40" height="40">Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="increase-font center table-border"><strong>3</strong></td>
+            <td class="center table-border"><img src="./assets/grocery/patanjali-cow-ghee.png" alt="patanjali-cow-ghee" height="120" /></td>
+            <td class="increase-font center table-border"><strong>Patanjali Ghee</strong></td>
+            <td class="increase-font center table-border"><strong>₹631</strong></td>
+            <td class="table-border">
+                <strong>Brand-</strong>PATANJALI <br> 
+                <strong>Type-</strong>Cow Ghee <br> 
+                <strong>Quantity-</strong>1L <br> 
+                <strong>Manufactured by:</strong> <br>
+                Unit 2, maharishi dayanand gram, beside divya nursery, Near patanjali Yogpeeth roorkee road, Haridwar- 249402
+            </td>
+            <td class="center table-border" width="60" height="60">
+                <button onclick="addToCart('Patanjali Ghee', '631', 'Brand- PATANJALI\nType- Cow Ghee\nQuantity- 1L\nManufactured by: Unit 2, maharishi dayanand gram, beside divya nursery, Near patanjali Yogpeeth roorkee road, Haridwar- 249402')">
+                    <img src="./assets/shopping-cart.svg" alt="shopping-cart" width="40" height="40">Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="increase-font center table-border"><strong>4</strong></td>
+            <td class="center table-border"><img src="./assets/grocery/aashirvaad-whole-wheat-atta.png" alt="aashirvaad-whole-wheat-atta" height="120" /></td>
+            <td class="increase-font center table-border"><strong>Atta</strong></td>
+            <td class="increase-font center table-border"><strong>₹478</strong></td>
+            <td class="table-border">
+                <strong>Brand-</strong>AASHIRVAAD <br> 
+                <strong>Type-</strong>whole-Wheat-Floor <br> 
+                <strong>Quantity-</strong>10kg <br> 
+                <strong>Manufactured by:</strong> <br>
+                At: plot No.41, 4th phase, Industrial Area, Malur Taluk-563130
+            </td>
+            <td class="center table-border" width="60" height="60">
+                <button onclick="addToCart('Atta', '478', 'Brand- AASHIRVAAD\nType- whole-Wheat-Floor\nQuantity- 10kg\nManufactured by: At: plot No.41, 4th phase, Industrial Area, Malur Taluk-563130')">
+                    <img src="./assets/shopping-cart.svg" alt="shopping-cart" width="40" height="40">Add to Cart
+                </button>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="increase-font center table-border"><strong>5</strong></td>
+            <td class="center table-border"><img src="./assets/grocery/maida-fortune.png" alt="maida-fortune" height="120" /></td>
+            <td class="increase-font center table-border"><strong>Maida</strong></td>
+            <td class="increase-font center table-border"><strong>₹25</strong></td>
+            <td class="table-border">
+                <strong>Brand-</strong>Fortune <br> 
+                <strong>Type-</strong>Maida <br> 
+                <strong>Quantity-</strong>500g <br> 
+                <strong>Manufactured by:</strong> <br>
+                Fortune HouseNear Navrangpura Railway Crossing,Ahmedabad - 380 009, GUJARAT (India)
+            </td>
+            <td class="center table-border" width="60" height="60">
+                <button onclick="addToCart('Maida', '25', 'Brand- Fortune\nType- Maida\nQuantity- 500g\nManufactured by: Fortune HouseNear Navrangpura Railway Crossing,Ahmedabad - 380 009, GUJARAT (India)')">
+                    <img src="./assets/shopping-cart.svg" alt="shopping-cart" width="40" height="40">Add to Cart
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>&copy; 2024 Suryakart. All rights reserved.</p>
+        <p>Wadala, Mumbai, Maharashtra, India</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price, description) {
+            // Retrieve existing cart items from localStorage or initialize an empty array
+            var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Add the new item to the cart
+            cartItems.push({ productName: productName, price: price, description: description });
+
+            // Update localStorage with the updated cart items
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Show alert message
+            alert('Item added to cart successfully!');
+        }
+    </script>
+</body>
+
+</html>

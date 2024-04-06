@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* CSS styles for modern buttons */
+.navigation {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px; /* Increase padding for bigger buttons */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation:hover {
+    background-color: #45a049;
+}
+
+/* CSS for aligning text and image */
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-container img {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.increase-font {
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+}
+
+.table-border {
+    border: 1px solid #ddd;
+}
+
+.button-cart {
+    display: flex;
+    align-items: center;
+}
+
+.button-cart button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-cart button:hover {
+    background-color: #45a049;
+}
+
+.cart-image {
+    margin-right: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff; 
+    padding: 2px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    th, td {
+        padding: 5px;
+    }
+
+    .increase-font {
+        font-size: 16px;
+    }
+
+    .button-cart button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

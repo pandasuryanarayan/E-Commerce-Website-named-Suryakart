@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* CSS styles for modern buttons */
+.navigation {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px; /* Increase padding for bigger buttons */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cart-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Ensure buttons stay inside the card */
+}
+
+.cart-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item-options {
+    position: absolute;
+    top: 10px;
+    right: -100%; /* Initially hide the buttons outside the card */
+    transition: right 0.3s ease; /* Add smooth transition on hover */
+    z-index: 1; /* Ensure the buttons appear on top of the card */
+    background-color: white; /* Set a background color to avoid overlapping */
+    padding: 5px; /* Add padding for better spacing */
+}
+
+.cart-item:hover .cart-item-options {
+    right: 10px; /* Display buttons on hover */
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: red;
+}
+
+p {
+    margin: 0;
+    color: #333;
+    margin-top: 5px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Button styles */
+.cart-item-options button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item-options button:hover {
+    background-color: #45a049;
+}
+
+.cart-item-options button.remove-button {
+    background-color: #f44336;
+}
+
+.cart-item-options button.remove-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Ensure buttons stay inside the card */
+.cart-item-options::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    z-index: -1;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    padding: 3px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footers {
+    color: #fff;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+
+    .cart-item-options {
+        right: 10px; /* Display buttons on smaller screens without animation */
+    }
+
+    .cart-item-options button {
+        display: block; /* Display buttons as block elements on smaller screens */
+        width: 100%; /* Full width buttons on smaller screens */
+    }
+
+    .cart-item:hover .cart-item-options {
+        right: 10px; /* Display buttons without animation on hover on smaller screens */
+    }
+}

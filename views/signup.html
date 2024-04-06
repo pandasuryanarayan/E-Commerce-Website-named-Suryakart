@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="./assets/android-chrome-192x192.png" type="image/x-icon">
+  <title>Signup Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <form action="/signup" method="post">
+      <h1> Surya <em> kart </em> </h1>
+      <h2>Signup</h2>
+      <table>
+        <tr>
+          <td><label for="username">E-mail:</label></td>
+          <td>
+            <input type="email" id="email" name="email" placeholder="Enter your E-mail" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td>
+            <input type="password" id="password" name="password" placeholder="Enter your password" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" id="submit">
+            <button type="submit" class="Action"> Create Account </button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="donTacc">
+            <label for="account?">Already have a account?</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="donTacc">
+            <a href="/"> Login </a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>
